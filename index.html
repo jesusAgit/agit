@@ -14,14 +14,15 @@
 <body>
 <div id="map" style="width:100%;height:350px;"></div>
 <p>
-  <button onclick="setBounds()">아지트 찾기22222</button>
+  
+  <button onclick="setBounds()">아지트 </button>
 </p>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
   mapOption = { 
-        center: new kakao.maps.LatLng(126.914910689284, 37.5978657721866), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(37.54699, 127.09598), // 지도의 중심좌표
         level: 4 // 지도의 확대 레벨
     };
 
@@ -33,7 +34,7 @@ var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_
 
 // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-    markerPosition = new kakao.maps.LatLng(126.914910689284, 37.5978657721866); // 마커가 표시될 위치입니다
+    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
@@ -52,7 +53,7 @@ var content = '<div class="customoverlay">' +
     '</div>';
 
 // 커스텀 오버레이가 표시될 위치입니다 
-var position = new kakao.maps.LatLng(126.914910689284, 37.5978657721866);  
+var position = new kakao.maps.LatLng(37.54699, 127.09598);  
 
 // 커스텀 오버레이를 생성합니다
 var customOverlay = new kakao.maps.CustomOverlay({
