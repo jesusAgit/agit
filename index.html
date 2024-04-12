@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <title>아지트 로스터스</title>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
-    
+    <style>
+      .customoverlay {position:relative;bottom:85px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+      .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+      /* .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;} */
+      .customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+      /* .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')} */
+      </style>
 </head>
 <body>
   안녕하세요 아지트로스터스입니다.<br/>
@@ -40,7 +46,7 @@ marker.setMap(map);
 
 // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 var content = '<div class="customoverlay">' +
-    '  <a href="https://map.kakao.com/link/map/11394059" target="_blank">' +
+    '  <a href="#" target="_blank">' +
     '    <span class="title">아지트</span>' +
     '  </a>' +
     '</div>';
