@@ -6,16 +6,30 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
      <!-- Favicons -->
     <link href="./img/logo.png" rel="icon">
+    <style>
+        .container {
+            width: 60%; /* 전체 너비의 60%를 차지 */
+            margin: 0 20%; /* 좌우로 20%의 마진을 가짐 */
+            background-color: rgb(236, 244, 218);
+            padding: 20px;
+            box-sizing: border-box; /* 패딩을 포함한 너비 지정 */
+        }
+      </style>
 </head>
 <body>
-  <img src="./img/logo.png" title="로고" style="width: 50px; height: 50px;" />
-  <br/>
-  <iframe width="866" height="487" src="https://www.youtube.com/embed/NQq0dOoEPUM" title="자바 코딩 무료 강의 (기본편) - 9시간 뒤면 여러분도 개발자가 될 수 있어요" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <br/>
-  <br/>
-  <br/>
+<div class="container">
 
-<div id="map" style="width:866px;height:350px;"></div>
+    <img src="./img/logo.png" title="로고" style="width: 50px; height: 50px;" />
+    <br/>
+    <iframe width="866" height="487" src="https://www.youtube.com/embed/NQq0dOoEPUM" title="자바 코딩 무료 강의 (기본편) - 9시간 뒤면 여러분도 개발자가 될 수 있어요" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="map" style="width:866px;height:350px;"></div>
+</div>
+
+
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
