@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>아지트 로스터스</title>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script> -->
      <!-- Favicons -->
     <link href="./img/logo.png" rel="icon">
     <style>
@@ -21,9 +21,10 @@
 
     <img src="./img/logo.png" title="로고" style="width: 50px; height: 50px;" />
     <br/>
-    <iframe width="100%" height="487" src="https://www.youtube.com/embed/Sa5lDJAhpTg" title="#라이브 찬양 드림 24.4.9 #전용대 #이형기 #양민호 #윤연정 #황지은 #박종성 #김대식 #연세중앙교회스튜디오 #찬양 #복음 #은혜 #감사#울고#웃고#하나님의 은혜" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <!-- 비디오 태그 영상 다운로드후 실행해봐야할듯싶음 안그러면 유튜브연결후 Iframe사용해야함. -->
-    <!-- <source src="videos/Clouds.mp4" type="video/mp4"> -->
+    <video id="video" width="100%" height="487" controls autoplay="false">
+        <source src="./mp4/agitMp4.mp4" type="video/mp4">
+        아지트 소개영상
+      </video>
     <br/>
     <br/>
     <br/>
@@ -33,6 +34,9 @@
 
 
 <script>
+window.onload=function(){
+    document.querySelector("#video").autoplay = false;
+}
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(37.5986400000000, 126.915331648223), // 지도의 중심좌표
