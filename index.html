@@ -4,16 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="아지트 로스터스입니다" />
-    <meta name="author" content="heechun" />
-
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>아지트 로스터스</title>
-    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script> -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
+    <!-- Favicons -->
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="img/logo.png" />
 
+    <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
     <!-- Font Awesome icons (free version)-->
     <script src=".js/all.js" crossorigin="anonymous"></script>
+    <!-- <script src="./js/kakao.js"></script> -->
     <!-- Google fonts-->
     <link href="./css/g1.css" rel="stylesheet" type="text/css" />
     <link href="./css/g2.css" rel="stylesheet" type="text/css" />
@@ -22,6 +24,33 @@
 </head>
 
 <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- 로그 수정필요 -->
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">소개</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">메뉴판</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">위치</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">어서오세요</div>
+            <div class="masthead-heading text-uppercase">아지트입니다</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#services">아지트소개</a>
+        </div>
+    </header>
     <!-- Services-->
     <section class="page-section" id="services">
         <div class="container">
@@ -37,6 +66,111 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- 메뉴판 -->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">메뉴판</h2>
+                <h3 class="section-subheading text-muted">아지트 메뉴</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">아메리카노</div>
+                            <div class="portfolio-caption-subheading text-muted">가격 : 4500</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Explore</div>
+                            <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Finish</div>
+                            <div class="portfolio-caption-subheading text-muted">Identity</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Lines</div>
+                            <div class="portfolio-caption-subheading text-muted">Branding</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Southwest</div>
+                            <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Window</div>
+                            <div class="portfolio-caption-subheading text-muted">Photography</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 메뉴판end -->
 
     <!-- 카카오맵 -->
     <section class="page-section" id="about">
@@ -81,7 +215,7 @@
    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="./img/logo.png" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
