@@ -1,4 +1,2 @@
-# 로봇 텍스트 파일(robots.txt)
-
 User-agent: *
 Allow: /
