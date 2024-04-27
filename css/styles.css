@@ -246,8 +246,7 @@ sup {
 }
 
 a {
-  color: var(--bs-link-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -11016,7 +11015,7 @@ header.masthead .masthead-heading {
 }
 #portfolio .portfolio-item .portfolio-caption {
   padding: 1.5rem;
-  text-align: center;
+  /* text-align: center; */
   background-color: #fff;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {

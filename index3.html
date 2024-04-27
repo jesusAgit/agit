@@ -1,67 +1,1009 @@
 <!DOCTYPE html>
-<html>
+<html lang="kr">
+
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="heechun" />
+    <meta name="description" content="아지트 로스터스">
     <title>아지트 로스터스</title>
+    <!-- 카카오 -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
-     <!-- Favicons -->
-    <link href="./img/logo.png" rel="icon">
-    <style>
-        .container {
-            width: 60%; /* 전체 너비의 60%를 차지 */
-            margin: 0 20%; /* 좌우로 20%의 마진을 가짐 */
-            background-color: rgb(236, 244, 218);
-            padding: 20px;
-            box-sizing: border-box; /* 패딩을 포함한 너비 지정 */
-        }
-      </style>
+
+    <!-- 아이폰 전화번호자동클릭방지메타태그 -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- 네이버서치어드바이더 -->
+    <meta name="naver-site-verification" content="4b78df9aa0ceddde81634a12bc5dfb0b00167afe" />
+    <!--
+        index: 페이지를 색인화합니다. (기본값)
+        follow: 페이지에 있는 링크를 따라갑니다. (기본값)
+    -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JG6G999PF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4JG6G999PF');
+    </script>
+    <!-- END Google tag (gtag.js) -->
+
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+    	
+    <meta property="og:url" content="https://agitjack.netlify.app/">
+    <meta property="og:title" content="아지트 로스터스">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./img/logo.png">
+    <meta property="og:description" content="아지트 로스터스에 오신걸 환영합니다.">
+    <meta property="og:site_name" content="아지트 로스터스">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
-<body>
-<div class="container">
 
-    <img src="./img/logo.png" title="로고" style="width: 50px; height: 50px;" />
-    <br/>
-    <video id="video" width="100%" height="487" controls autoplay="false">
-        <source src="./mp4/agitMp4.mp4" type="video/mp4">
-        아지트 소개영상
-      </video>
-    <br/>
-    <br/>
-    <br/>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- 로그 수정필요 -->
+            <a class="navbar-brand" href="#">A:GIT </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">소개</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">메뉴판</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">위치</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">어서오세요</div>
+            <div class="masthead-heading text-uppercase">아지트입니다</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#services">아지트소개</a>
+        </div>
+    </header>
+    <!-- Services-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">아지트</h2>
+                <h3 class="section-subheading text-muted">서울 은평구 증산로 475 2층, 3층&nbsp;&nbsp;<a href="tel:02-3152-2910"><i class="bi bi-telephone-forward" style="color: black;"> (02)3152-2910</i></a></h3>
+            </div>
+            <div class="row text-center">
+                <video id="video" width="100%" height="487" controls>
+                    <source src="./mp4/agitMp4.mp4" type="video/mp4">
+                    아지트 소개영상
+                </video>
+            </div>
+        </div>
+    </section>
 
-    <div id="map" style="width:100%;height:350px;"></div>
+
+
+    <!-- 메뉴판 -->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">메뉴판<br/></h2>
+                <h3 class="section-subheading text-muted"><br/>커피</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/americano.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading"> 아메리카노</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted"> 4000원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/cafeLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">카페라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5000원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/vanillaCafeLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">바닐라 카페라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 4-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/caramelMacchiato.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">카라멜 마끼아또</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 5-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/cafeMocha.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">카페모카</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 6-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/strawberryLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">딸기라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 7-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal7">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/sweetPotatoLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">고구마 라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 8-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/greenTeaLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">그린티 라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 9-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal9">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/milkTeaLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">밀크티 라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 10-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal10">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/chocolateLatte.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">초콜릿 라떼</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5200원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 15-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal15">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/flatWhite.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">플랫 화이트</div>
+                            <div class="portfolio-caption-subheading text-muted">HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5000원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 16-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal16">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/cappuccino.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">카푸치노</div>
+                            <div class="portfolio-caption-subheading text-muted">HOT</div>
+                            <div class="portfolio-caption-subheading text-muted">5000원</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase"><br/></h2>
+                <h3 class="section-subheading text-muted">요거트</h3>
+            </div>
+                <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 11-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal11">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/plainYogurt.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">플레인 요거트</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE</div>
+                            <div class="portfolio-caption-subheading text-muted">6000원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 12-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal12">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/strawberryYogurt.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">딸기 요거트</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE</div>
+                            <div class="portfolio-caption-subheading text-muted">6000원</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase"><br/></h2>
+                <h3 class="section-subheading text-muted">에이드</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 13-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal13">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/lemonAde.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">레몬 에이드</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE</div>
+                            <div class="portfolio-caption-subheading text-muted">6000원</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 14-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal14">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="img/coffee/grapefruitAde.jpg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">자몽 에이드</div>
+                            <div class="portfolio-caption-subheading text-muted">ICE</div>
+                            <div class="portfolio-caption-subheading text-muted">6000원</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 메뉴판end -->
+
+    <!-- 카카오맵 -->
+    <section class="" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">아지트 로스터스</h2>
+                <h3 class="section-subheading text-muted">서울 은평구 증산로 475 2층, 3층</h3>
+                <br/>
+            </div>
+            <ul class="timeline">
+                <div id="map" style="width:100%;height:350px;"></div>
+            </ul>
+            <div class="text-center">
+                <h3><a href="tel:02-3152-2910"><i class="bi bi-telephone-forward" style="color: #6c757d"> (02)3152-2910</i></a></h3>
+            </div>
+        </div>
+    </section>
+    <!-- 카카오맵end -->
+
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; heeChun 2024</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a> -->
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <!-- <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 메뉴 모달 -->
+   <!-- Portfolio item 1 modal popup-->
+   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details 1-->
+                            <h3 class="text-uppercase">아메리카노</h3>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <p class="item-intro text-muted">4000원</p>
+                            <img class="img-fluid d-block mx-auto" src="img/coffee/americano.jpg" alt="..." />
+                            <p></p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>SUNCUP(고소한) / SUMMER TIME(산미)</strong> 택(1) 사업즈 up 가능 (아이스만)
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                메뉴판 이동
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- Portfolio item 2 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details 2-->
+                            <h3 class="text-uppercase">카페라떼</h3>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <p class="item-intro text-muted">5000원</p>
+                            <img class="img-fluid d-block mx-auto" src="img/coffee/cafeLatte.jpg" alt="..." />
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>SUNCUP(고소한) / SUMMER TIME(산미)</strong>택(1) 사업즈 up 가능 (아이스만)
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                메뉴판 이동
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio item 3 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details 3-->
+                            <h3 class="text-uppercase">바닐라 카페라떼</h3>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <p class="item-intro text-muted">5200원</p>
+                            <img class="img-fluid d-block mx-auto" src="img/coffee/vanillaCafeLatte.jpg" alt="..." />
+                            <p></p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>SUNCUP(고소한)</strong> 사업즈 up 가능 (아이스만)
+                                </li>
+                                <li>
+                                    <!-- <strong>  -->
+                                        바닐라의 달달함이 느껴 지는 달달한 라떼
+                                    <!-- </strong> -->
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                메뉴판 이동
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio item 4 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details 4 -->
+                            <h3 class="text-uppercase">카라멜 마끼아또</h3>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <p class="item-intro text-muted">5200원</p>
+                            <img class="img-fluid d-block mx-auto" src="img/coffee/caramelMacchiato.jpg" alt="..." />
+                            <p></p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>SUNCUP(고소한)</strong> 사업즈 up 가능 (아이스만)
+                                </li>
+                                <li>
+                                    카라멜의 달달함을 느낄 수 있는 달달한 라떼
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                메뉴판 이동
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio item 5 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="modal-body">
+                            <!-- Project details 5-->
+                            <h3 class="text-uppercase">카페모카</h3>
+                            <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                            <p class="item-intro text-muted">5200원</p>
 
+                            <img class="img-fluid d-block mx-auto" src="img/coffee/cafeMocha.jpg" alt="..." />
+                            <p></p>
+                            <ul class="list-inline">
+                                <li>
+                                    <strong>SUNCUP(고소한)</strong> 사업즈 up 가능 (아이스만)
+                                </li>
+                                <li>
+                                    에스프레소, 초콜릿 시럽, 우유의 조화롭게 섞어만든 라떼 
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-xmark me-1"></i>
+                                메뉴판 이동
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio item 6 modal popup-->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 6-->
+                                <h3 class="text-uppercase">딸기라떼</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE</div>
+                                <p class="item-intro text-muted">5200원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/strawberryLatte.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>딸기청에 우유가 만난 라떼</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 7 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details 7-->
+                                    <h3 class="text-uppercase">고구마 라떼</h3>
+                                    <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                                    <p class="item-intro text-muted">5200원</p>
+                                    <img class="img-fluid d-block mx-auto" src="img/coffee/sweetPotatoLatte.jpg" alt="..." />
+                                    <p></p>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <strong>고구마와 우유를 만나 달콤하면서도 고소한 라떼</strong>
+                                        </li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        메뉴판 이동
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Portfolio item 8 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 8-->
+                                <h3 class="text-uppercase">그린티 라떼</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                                <p class="item-intro text-muted">5200원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/greenTeaLatte.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>녹차(그린티)와 우유를 혼합한 라떼</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 9 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 9-->
+                                <h3 class="text-uppercase">밀크티 라떼</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                                <p class="item-intro text-muted">5200원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/milkTeaLatte.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>홍차(밀크티)와 우유를 혼합한 라떼</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 10 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 10-->
+                                <h3 class="text-uppercase">초콜릿 라떼</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE / HOT</div>
+                                <p class="item-intro text-muted">5200원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/chocolateLatte.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>초콜릿과 우유를 혼합한 라떼</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 11 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 11-->
+                                <h3 class="text-uppercase">플레인 요거트</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE</div>
+                                <p class="item-intro text-muted">6000원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/plainYogurt.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>신선한 우유와 요거트파우더의 만남(스무디) </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 12 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 12-->
+                                <h3 class="text-uppercase">딸기 요거트</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE</div>
+                                <p class="item-intro text-muted">6000원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/strawberryYogurt.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>딸기청과 요거트파우더의 만남(스무디) </strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 13 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 13-->
+                                <h3 class="text-uppercase">레몬 에이드</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE</div>
+                                <p class="item-intro text-muted">6000원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/lemonAde.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>신선한 레몬과 사이다의 만남</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 14 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 14-->
+                                <h3 class="text-uppercase">자몽 에이드</h3>
+                                <div class="portfolio-caption-subheading text-muted">ICE</div>
+                                <p class="item-intro text-muted">6000원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/grapefruitAde.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>신선한 자몽과 사이다의 만남</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 15 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 15-->
+                                <h3 class="text-uppercase">플랫 화이트</h3>
+                                <div class="portfolio-caption-subheading text-muted">HOT</div>
+                                <p class="item-intro text-muted">5000원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/flatWhite.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>에스프레소와 스팀 밀크의 만남</strong>
+                                         카페 라떼와 유사하지만 더 진한 맛과 크리미한 질감
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 16 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details 16-->
+                                <h3 class="text-uppercase">카푸치노</h3>
+                                <div class="portfolio-caption-subheading text-muted">HOT</div>
+                                <p class="item-intro text-muted">5000원</p>
+                                <img class="img-fluid d-block mx-auto" src="img/coffee/cappuccino.jpg" alt="..." />
+                                <p></p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>에스프레소, 스팀 우유, 우유 거품을 조화롭게 섞어만든 이탈리아식 커피</strong>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    메뉴판 이동
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center: new kakao.maps.LatLng(37.5986400000000, 126.915331648223), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };  
+    <!-- 메뉴 모달 -->
+  
+    <!-- Bootstrap core JS-->
+    <script src="./js/min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-// 지도를 생성합니다    
-var map = new kakao.maps.Map(mapContainer, mapOption); 
-
-var coords = new kakao.maps.LatLng(37.5986400000000, 126.915331648223);
-
-// 결과값으로 받은 위치를 마커로 표시합니다
-var marker = new kakao.maps.Marker({
-    map: map,
-    position: coords
-});
-
-// 인포윈도우로 장소에 대한 설명을 표시합니다
-var infowindow = new kakao.maps.InfoWindow({
-    content: '<div style="width:150px;text-align:center;padding:6px 0;">아지트</div>'
-});
-infowindow.open(map, marker);
-
-// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-map.setCenter(coords);
-
-</script>
-
-
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(37.5986400000000, 126.915331648223), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };  
+        
+        // 지도를 생성합니다    
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+        
+        var coords = new kakao.maps.LatLng(37.5986400000000, 126.915331648223);
+        
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: coords
+        });
+        
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">아지트</div>'
+        });
+        infowindow.open(map, marker);
+        
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        map.setCenter(coords);
+        
+        </script>
 </body>
 </html>
+<!-- 
+
+1. (커피)아메리카노 4000원 (둘다)
+2. (커피)카페라떼 5000 cafeLatte (둘다)
+3. (커피)바닐라 카페라떼 5200 vanillaCafeLatte (둘다)
+4. (커피)카라멜 마끼아또 5200 caramelMacchiato (둘다)
+5. (커피)카페모카 5200 cafeMocha (둘다)
+6. (커피)딸기라떼 5200 strawberryLatte (아이스)
+7. (커피)고구마라떼 5200 sweetPotatoLatte (둘다)
+8. (커피)그린티라떼 5200 greenTeaLatte (둘다)
+9. (커피)밀크티라떼 5200 milkTeaLatte (둘다) 
+10. (커피)초콜릿라떼 5200 chocolateLatte (둘다)
+11. (요거트)플레인요거트 6000 plainYogurt (아이스)
+12. (요거트)딸기요거트 6000 strawberryYogurt (아이스)
+13. (에이드)레몬에이드 6000 lemonAde  (아이스)
+14. (에이드)자몽에이드 6000 grapefruitAde (아이스)
+
+15. (커피)플랫 화이트 5000 flatWhite (뜨거운것)
+16. (커피)카푸치노 5000 cappuccino (뜨거운것) 
+
+-->
