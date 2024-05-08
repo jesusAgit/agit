@@ -102,7 +102,14 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "Dongle", sans-serif;
 }
+.dongle-regular {
+  font-family: "Dongle", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 hr {
   margin: 1rem 0;
