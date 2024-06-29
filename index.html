@@ -7,8 +7,8 @@
     <meta name="author" content="heechun" />
     <meta name="description" content="아지트 로스터스">
     <title>아지트 로스터스</title>
-    <!-- 카카오 -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script>
+    <!-- 카카오 스크립트에서 추가 -->
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74"></script> -->
 
     <!-- 아이폰 전화번호자동클릭방지메타태그 -->
     <meta name="format-detection" content="telephone=no">
@@ -1761,6 +1761,19 @@
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
     <script>
+        // 카카오맵 추가 
+        if (window.location.href.includes("agitjack.netlify.app/")) {
+            // 새로운 스크립트 태그를 만듭니다.
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=372ace69c028e8d4f71b5cff1c927c74";
+
+            // 스크립트 태그를 body에 추가합니다.
+            document.body.appendChild(script);
+        }
+        // end 카카오맵 추가
+
+
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
                 center: new kakao.maps.LatLng(37.5986400000000, 126.915331648223), // 지도의 중심좌표
