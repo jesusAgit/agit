@@ -1762,7 +1762,8 @@
 
     <script>
         // 카카오맵 추가 
-        if (window.location.href.includes("agitjack.netlify.app/")) {
+        var currentUrl = window.location.href;
+        if (currentUrl.includes("agitjack.netlify.app/")) {
             // 새로운 스크립트 태그를 만듭니다.
             var script = document.createElement("script");
             script.type = "text/javascript";
